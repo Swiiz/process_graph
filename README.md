@@ -20,8 +20,8 @@
  The `pipe` method allows you to connect two `GraphNode`s. The output of the first node becomes the input of the second, creating a pipeline. For example, if you have a node that takes an `i32` and returns a `String`, and another that takes a `String` and returns a `Vec<u8>`, you can chain them:
 
  ```rust
- # use process_graph::{GraphNode, Graph};
- # use std::marker::PhantomData;
+ use process_graph::{GraphNode, Graph};
+
  let node1 = |x: i32| x.to_string();
  let node2 = |s: String| s.into_bytes();
 
